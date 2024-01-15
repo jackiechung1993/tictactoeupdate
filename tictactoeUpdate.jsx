@@ -1,5 +1,3 @@
-import React, {useState} from 'react';
-
 const Board = () => {
   // 1st player is X ie 1
   // State keeps track of next player and gameState
@@ -93,11 +91,7 @@ const Game = () => {
   );
 };
 
-// Checking for Winner takes a bit of work
 // Use JavaScript Sets to check players choices
-// against winning combinations
-// Online there is more compact version but I prefer this one
-
 const win = [
   // rows
   [0, 1, 2],
@@ -145,7 +139,6 @@ const checkForWinner = (gameState, playerOWins, playerXWins, setPlayerOWins, set
   return 'No Winner Yet';
 }};
 
-// check if subset is in the set
 function isSuperset(set, subset) {
   for (let elem of subset) {
     if (!set.has(elem)) {
@@ -154,7 +147,5 @@ function isSuperset(set, subset) {
   }
   return true;
 }
-
-// ========================================
 
 ReactDOM.render(<Game />, document.getElementById('root'));
