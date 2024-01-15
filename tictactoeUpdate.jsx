@@ -1,3 +1,5 @@
+import React, {useState} from 'react';
+
 const Board = () => {
   // 1st player is X ie 1
   // State keeps track of next player and gameState
