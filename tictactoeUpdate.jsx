@@ -3,10 +3,11 @@ const Board = () => {
   // State keeps track of next player and gameState
   const [player, setPlayer] = React.useState(1);
   const [gameState, setGameState] = React.useState([]);
+  //State keeps track of player wins
   const [playerOWins, setPlayerOWins] = React.useState(0);
   const [playerXWins, setPlayerXWins] = React.useState(0);
 
-  let status = `Winner is ${checkForWinner(gameState)}`;
+  let status = `Winner is ${checkForWinner(gameState, playerOWins, playerXWins, setPlayerOWins, setPlayerXWins)}`;
 
   // Use conditional logic to set a variable to either 'Player O' or  'Player X'
   let playerTurn = `Next Player: ${player == '0' ? 'Player O' : 'Player X'}`;
@@ -49,7 +50,7 @@ const Board = () => {
       <div id="info">
         <h1 id="turn">{playerTurn}</h1>
         <h1>{status}</h1>
-        <h1>Player 0 Wins: {playerOWins}</h1>
+        <h1>Player O Wins: {playerOWins}</h1>
         <h1>Player X Wins: {playerXWins}</h1>
       </div>
       <button onClick={resetGame}>Restart</button>
@@ -113,7 +114,7 @@ const checkPlayerTurn = (gameState) => {
   return gameState.player;
 };
 
-const checkForWinner = (gameState) => {
+const checkForWinner = (gameState, playerOWins, playerXWins, setPlayerOWins, setPlayerXWins) => {
   // get array of box id's
   // can't be a winner in less than 5 turns
   if (gameState.length < 5) return 'No Winner Yet';
@@ -140,7 +141,8 @@ const checkForWinner = (gameState) => {
     setPlayerXWins(playerXWins + 1);
     return 'Player X ';
   return 'No Winner Yet';
-};
+}};
+
 // check if subset is in the set
 function isSuperset(set, subset) {
   for (let elem of subset) {

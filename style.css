@@ -1,0 +1,38 @@
+button {
+    background-color: aqua;
+    border: 6px solid gray;
+    border-radius: 10px;
+}
+
+.game-board {
+    width: 600px;
+    height: 600px;
+    margin: 0 auto;
+    background-color: rgb(61, 48, 48);
+    color: red;
+    border: 6px solid black;
+    border-radius: 10px;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.grid-row {
+    border: 6px solid beige;
+    border-radius: 6px;
+    font-family: Helvetica;
+    font-weight: bold;
+    font-size: 4em;
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    background-color: purple;
+}
+
+.red {
+    color: red
+}
+
+.white {
+    color: white
+}
