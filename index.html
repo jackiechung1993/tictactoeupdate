@@ -1,22 +1,24 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8" />
-        <title>React Tic Tac Toe</title>
-        <link rel="stylesheet" href="style.css"/>
-        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-    </head>
+  <head>
+    <meta charset="UTF-8" />
+    <title>React Tic-tac-toe</title>
+    <link rel="stylesheet" href="styles.css" />
+    <!-- Don't use this in production: -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  </head>
 
-    <body>
-        <h1>React Tic Tac Toe</h1>
+  <body>
+    <h1>React Tic-tac-toe</h1>
 
-        <div id="root"></div>
+    <!-- You will put our React component inside this div. -->
+    <div id="root"></div>
 
-        <!-- LOAD React-->
-        <script src="https://unpkg.com/react/umd/react.development.js" crossorigin></script>
-        <script src="https://unpkg.com/react-dom/umd/react-dom.development.js" crossorigin></script>
-        <!--LOAD COMPONENT-->
-        <script src="tictactoeUpdate.jsx" defer type=" text/babel"></script>  
-    </body>
+    <!-- Load React. -->
+    <script src="https://unpkg.com/react/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom/umd/react-dom.development.js" crossorigin></script>
 
+    <!-- Load our React component. -->
+    <script src="tictactoeUpdate.jsx" defer type="text/babel"></script>
+  </body>
 </html>
